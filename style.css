@@ -1,0 +1,64 @@
+/*
+The designs were created to the following widths:
+- Mobile: 375px
+- Desktop: 1440px
+  */
+
+:root {
+    /* variables: */
+    --colors-primary-light-red: hsl(0, 100%, 67%);
+    --colors-primary-orangey-yellow: hsl(39, 100%, 56%);
+    --colors-primary-green-teal:hsl(166, 100%, 37%);
+    --colors-primary-cobalt-blue: hsl(234, 85%, 45%);
+    --colors-gradients-light-slate-blue-background: hsl(252, 100%, 67%);
+    --colors-gradients-light-royal-blue-background: hsl(241, 81%, 54%);
+    --colors-gradients-violet-blue-circle:hsla(256, 72%, 46%, 1);
+    --colors-gradients-persian-blue-circle: hsla(241, 72%, 46%, 0);
+    --colors-neutral-white: hsl(0, 0%, 100%);
+    --colors-neutral-pale-blue: hsl(221, 100%, 96%);
+    --colors-neutral-light-lavender: hsl(241, 100%, 89%);
+    --colors-neutral-dark-gray-blue: hsl(224, 30%, 27%);
+    /* typography variables: */
+    --typography-body-copy-paragraph-font-size: 18px;
+    --typography-font-family: Hanken Grotesk; /* Should I include a url to assets here? */
+    --typography-font-weight-500: 500;
+    --typography-font-weight-700: 700;
+    --typography-font-weight-800: 800;
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+
+    margin: 0;
+    height: 0;
+
+}
+
+.page-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.component-container {
+    width: 720px;
+    height: 405px; 
+    /* temporary sizes */
+    display: grid;
+    grid-template: 1fr / 1fr 1fr;
+    background-color: white;
+    border-radius: 25px;
+    box-shadow: 10px 10px 20px 10px blueviolet;
+}
+
+.result-container {
+    background-image: linear-gradient(var(--colors-gradients-light-royal-blue-background), var(--colors-gradients-light-slate-blue-background));
+    border-radius: 25px;
+}
