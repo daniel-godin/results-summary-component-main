@@ -5,8 +5,9 @@ The designs were created to the following widths:
   */
 
 @font-face {
-    font-family: "Hanken Grotesk";
+    font-family: 'Hanken Grotesk';
     src: url(./assets/fonts/HankenGrotesk-VariableFont_wght.ttf);
+    font-weight: 500 800;
 }
 
 :root {
@@ -25,7 +26,7 @@ The designs were created to the following widths:
     --colors-neutral-dark-gray-blue: hsl(224, 30%, 27%);
     /* typography variables: */
     --typography-body-copy-paragraph-font-size: 18px;
-    --typography-font-family: "Hanken Grotesk"; /* Should I include a url to assets here? */
+    --typography-font-family: "Hanken Grotesk";
     --typography-font-weight-500: 500;
     --typography-font-weight-700: 700;
     --typography-font-weight-800: 800;
@@ -51,11 +52,7 @@ body {
     height: 100vh;
     overflow: hidden;
     box-sizing: border-box;
-    font-family: "Hanken Grotesk";
-}
-
-p {
-    color: var(--colors-neutral-light-lavender);
+    font-family: 'Hanken Grotesk';
 }
 
 .page-container {
@@ -74,39 +71,59 @@ p {
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 40px;
+    padding-top: 20px;
     gap: 20px;
 }
 
+.result-container p {
+    color: var(--colors-neutral-light-lavender);
+    opacity: 0.6;
+    font-weight: 500;
+}
 
-button,
-h1,
-h2 {
-    color: var(--colors-neutral-white);
-} 
+h1 {
+    font-size: 3rem;
+}
 
 .score-circle {
     border-radius: 50%;
     background-image: linear-gradient(var(--colors-gradients-violet-blue-circle), var(--colors-gradients-persian-blue-circle));
-    width: 100px;
-    height: 100px;
+    width: 125px;
+    height: 125px;
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
     align-items: center;
-    gap: 0px;
     padding: 0;
     margin: 0;
+}
+
+.result-container h1, h2, h3 {
+    color: var(--colors-neutral-white);
+}
+
+.score-circle p {
+    color: var(--colors-neutral-light-lavender);
+    font-size: .8rem;
 }
 
 .summary-container {
     display: flex;
     flex-flow: column nowrap;
     padding: 20px;
-    gap: 10px;
+    gap: 15px;
 }
 
+.summary-container p {
+    color: var(--colors-neutral-light-lavender);
+    font-weight: 700;
+}
 
+.summary-container h2 {
+    color: var(--colors-neutral-dark-gray-blue);
+    font-size: 1rem;
+}
 
 .summary-score-box {
     width: 100%;
@@ -116,7 +133,6 @@ h2 {
     align-items: center;
     justify-content: space-between;
     padding: 15px;
-
 }
 
 .summary-container > .summary-score-box > div {
@@ -125,24 +141,44 @@ h2 {
 
 }
 
-.summary-container > .summary-score-box > div > h3 {
-    padding-left: 10px;
+.summary-container > .summary-score-box > div > img {
+    padding-right: 10px;
 }
 
 .reaction {
     background-color: hsla(var(--colors-primary-light-red), 0.15);
 }
 
+.reaction > div > img + p {
+    color: hsla(var(--colors-primary-light-red), 0.75);
+}
+
 .memory {
     background-color: hsla(var(--colors-primary-orangey-yellow), 0.15);
+}
+
+.memory > div > img + p {
+    color: hsla(var(--colors-primary-orangey-yellow), 0.75);
 }
 
 .verbal {
     background-color: hsla(var(--colors-primary-green-teal), 0.15);
 }
 
+.verbal > div > img + p {
+    color: hsla(var(--colors-primary-green-teal), 0.75);
+}
+
 .visual {
     background-color: hsla(var(--colors-primary-cobalt-blue), 0.15);
+}
+
+.visual > div > img + p {
+    color: hsla(var(--colors-primary-cobalt-blue), 0.75);
+}
+
+.summary-score-box > div:nth-child(2) > p:first-child {
+    color: var(--colors-neutral-dark-gray-blue);
 }
 
 button {
@@ -151,6 +187,8 @@ button {
     border-radius: 30px;
     background-color: var(--colors-neutral-dark-gray-blue);
     border: none;
+    color: var(--colors-neutral-white);
+    font-size: 1.25rem;
 }
 
 @media screen and (min-width: 500px) {
