@@ -112,7 +112,7 @@ h1 {
     display: flex;
     flex-flow: column nowrap;
     padding: 20px;
-    gap: 15px;
+    gap: 25px;
 }
 
 .summary-container p {
@@ -125,6 +125,13 @@ h1 {
     font-size: 1rem;
 }
 
+.scores-container {
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 10px;
+
+}
+
 .summary-score-box {
     width: 100%;
     border-radius: 10px;
@@ -135,13 +142,13 @@ h1 {
     padding: 15px;
 }
 
-.summary-container > .summary-score-box > div {
+.summary-container > .scores-container > .summary-score-box > div {
     display: flex;
     justify-content: space-between;
 
 }
 
-.summary-container > .summary-score-box > div > img {
+.summary-container > .scores-container > .summary-score-box > div > img {
     padding-right: 10px;
 }
 
@@ -189,30 +196,36 @@ button {
     border: none;
     color: var(--colors-neutral-white);
     font-size: 1.25rem;
+    align-items: center;
+
 }
 
-@media screen and (min-width: 500px) {
+@media screen and (min-width: 1000px) {
     .page-container {
-        width: 100vw;
         height: 100vh;
+        width: 100vw;
         display: flex;
         justify-content: center;
         align-items: center;
     }
-
-    .component-container {
-        width: 720px;
-        height: 405px; 
-        /* temporary sizes */
+        
+    .info-container {
+        width: 50%;
         display: grid;
-        grid-template: 1fr / 1fr 1fr;
-        background-color: white;
+        grid-template-columns: 1fr 1fr;
         border-radius: 25px;
-        box-shadow: 10px 10px 20px 10px blueviolet;
+        box-shadow: 10px 10px 20px 10px var(--colors-neutral-pale-blue);
     }
 
     .result-container {
-        background-image: linear-gradient(var(--colors-gradients-light-royal-blue-background), var(--colors-gradients-light-slate-blue-background));
         border-radius: 25px;
+
+        text-align: center;
+        
+    }
+
+    .summary-container {
+        border-top-right-radius: 25px;
+        border-bottom-right-radius: 25px;
     }
 }
