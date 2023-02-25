@@ -53,6 +53,7 @@ body {
     overflow: hidden;
     box-sizing: border-box;
     font-family: 'Hanken Grotesk';
+    min-width: 300px;
 }
 
 .page-container {
@@ -69,10 +70,9 @@ body {
     border-bottom-right-radius: 20px;
     display: flex;
     flex-flow: column nowrap;
-    justify-content: center;
     align-items: center;
-    padding: 40px;
-    padding-top: 20px;
+    text-align: center;
+    padding: 30px;
     gap: 20px;
 }
 
@@ -111,7 +111,7 @@ h1 {
 .summary-container {
     display: flex;
     flex-flow: column nowrap;
-    padding: 20px;
+    padding: 30px;
     gap: 25px;
 }
 
@@ -128,14 +128,13 @@ h1 {
 .scores-container {
     display: flex;
     flex-flow: column nowrap;
-    gap: 10px;
+    gap: 15px;
 
 }
 
 .summary-score-box {
     width: 100%;
     border-radius: 10px;
-    /* border: solid 1px black; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -200,7 +199,7 @@ button {
 
 }
 
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 650px) {
     .page-container {
         height: 100vh;
         width: 100vw;
@@ -210,22 +209,20 @@ button {
     }
         
     .info-container {
-        width: 50%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
+        display: flex;
+        flex-flow: row nowrap;
         border-radius: 25px;
         box-shadow: 10px 10px 20px 10px var(--colors-neutral-pale-blue);
     }
 
     .result-container {
         border-radius: 25px;
-
-        text-align: center;
-        
+        width: 325px;
     }
 
     .summary-container {
         border-top-right-radius: 25px;
         border-bottom-right-radius: 25px;
+        width: 325px;
     }
 }
